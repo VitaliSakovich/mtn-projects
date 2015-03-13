@@ -28,7 +28,7 @@
      <javac srcdir="${src}" destdir="${build}" classpathref="build.classpath"/>
   </target>
 
- <target name="test_ant" depends="compile">
+ <!--<target name="test_ant" depends="compile">
     <junit>
    <classpath refid="build.classpath"/>
   <formatter type="brief" usefile="false"/>
@@ -39,8 +39,8 @@
     </batchtest>
    </junit>
   </target>
- 
-  <target name="jar" depends="test_ant">
+ -->
+  <target name="jar" depends="compile">
     <mkdir dir="${jar}/lib"/>	
       <jar jarfile="${jar}/lib/antProject.jar" basedir="${build}"/>
   </target> 
